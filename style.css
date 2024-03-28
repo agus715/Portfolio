@@ -32,7 +32,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 3rem 9%;
+    padding: 3rem;
     background: #131313bd;
     backdrop-filter: blur(10px);
     display: flex;
@@ -56,13 +56,52 @@ body{
 .navigation a{
     font-size: 1.8rem;
     color: white;
-    margin-left: 4rem;
+    margin-left: 3rem;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
 
-.navigation a:hover,
+
+.dropdown {
+    position: relative;
+    justify-content: space-between;
+    display: inline-block;
+    padding-left: 2.5rem; /* Atur jarak atas dropdown */
+}
+
+/* Styling untuk elemen select */
+#languageSelect {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #f8f8f801;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+   text-align: center;
+}
+
+/* Styling untuk opsi select */
+#languageSelect option {
+    background-color: var(--second-bg-color);
+    color: rgb(255, 255, 255)
+}
+
+/* Hover effect pada opsi select */
+#languageSelect option:hover {
+    background-color: #f8f8f801;
+}
+
+/* Styling untuk saat elemen select aktif (diklik) */
+#languageSelect:active,
+#languageSelect:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.597);
+}
+
+
+.navigation a:hover, 
 .navigation a.active{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
@@ -144,7 +183,7 @@ span{
     font-size: 2.5rem;
     border-radius: 50%;
     color: var(--main-color);
-    margin: 2rem 1rem 2rem 2.3rem;
+    margin: 2rem 1.2rem 2rem 0;
     transition: 0.3s ease;
 }
 
@@ -175,6 +214,8 @@ span{
     color: var(--text-color);
     box-shadow: 0 0 25 var(--main-color);
 }
+
+
 
 .text-animation{
     font-size: 2rem;
@@ -220,7 +261,7 @@ span{
     }
     41%,
     60% {
-        content: 'Desain Grafis';
+        content: 'Graphic Designer';
     }
     61%,
     80% {
@@ -228,7 +269,7 @@ span{
     }
     81%,
     100% {
-        content: 'Teknisi F.O';
+        content: 'Front-End Dev';
     }
 
     
@@ -267,7 +308,7 @@ span{
 }
 
 #about{
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
     text-align: center;
     color: white;
     font-size: 2.7rem;
@@ -306,6 +347,37 @@ span{
     color:white;
     text-align: justify;
 }
+
+#about span.skills{
+    font-weight: 500;
+    padding: 0 0 1.3rem 0;
+    text-align: justify;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 5px; 
+    font-size: 1.4rem;
+    text-align: center;
+}
+  
+.skill-item {
+    padding: 8px 10px; 
+    background-color: #025a80;
+    color: #ffffff;
+    border-radius: 10px; 
+    transition: 0.3s ease;
+    cursor: default;
+    flex-grow: 1;
+
+}
+
+.skill-item:hover{
+    transform: scale(1.1);
+}
+  
 
 .projects{
     background:var(--bg-color);
